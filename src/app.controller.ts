@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body } from '@nestjs/common';
+import { Controller, Get } from '@nestjs/common';
 import { AppService } from './app.service';
 
 @Controller()
@@ -8,5 +8,10 @@ export class AppController {
   @Get("countriesNames")
   getCountriesNamesList(): string[] {
     return ["Israel", "Ireland", "Japan", "USA", "Poland", "Morroco"];
+  }
+
+  @Get("login")
+  login(): boolean {
+    return true;
   }
 }
